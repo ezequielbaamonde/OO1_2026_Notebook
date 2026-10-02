@@ -1,0 +1,75 @@
+package ar.edu.unlp.info.oo1.Punto9;
+import java.sql.Date;
+
+public class Mamifero {
+	private String id;
+	private String especie;
+	private Date fechaNac;
+	private Mamifero padre;
+	private Mamifero madre;
+	
+	public Mamifero(String id, String especie, Date fechaNac) {
+		super();
+		this.id = id;
+		this.especie = especie;
+		this.fechaNac = fechaNac;
+	}
+	
+	public String getIdentificador() {
+		return id;
+	}
+	public void setIdentificar(String id) {
+		this.id = id;
+	}
+	public String getEspecie() {
+		return especie;
+	}
+	public void setEspecie(String especie) {
+		this.especie = especie;
+	}
+	public Date getFechaNacimiento() {
+		return fechaNac;
+	}
+	public void setFechaNacimiento(Date fechaNac) {
+		this.fechaNac = fechaNac;
+	}
+	
+	public Mamifero getPadre() {
+		return this.padre;
+	}
+	
+	public Mamifero getMadre() {
+		return this.madre;
+	}
+	
+	public Mamifero getAbueloMaterno() {
+		if( this.madre == null) {
+			return null;
+		}
+		return this.madre.getPadre();
+	}
+	
+	public Mamifero getAbuelaMaterna() {
+		if( this.madre == null) {
+			return null;
+		}
+		return this.madre.getMadre();
+	}
+	
+	public Mamifero getAbueloPaterno() {
+		if( this.padre == null) {
+			return null;
+		}
+		return this.padre.getPadre();
+	}	
+	
+	public Mamifero getAbuelaPaterna() {
+		if( this.padre == null) {
+			return null;
+		}
+		return this.padre.getMadre();
+	}
+	
+	
+	
+}

@@ -1,0 +1,95 @@
+package ar.edu.unlp.info.oo1.Punto9;
+import java.sql.Date;
+
+public class Mamifero {
+	private String id;
+	private String especie;
+	private Date fechaNac;
+	private Mamifero padre;
+	private Mamifero madre;
+	
+	public Mamifero(String especie) {
+		this.id = id;
+		this.especie = especie;
+		this.fechaNac = fechaNac;
+	}
+	
+	public String getIdentificador() {
+		return id;
+	}
+	
+	public void setIdentificador(String id) {
+		this.id = id;
+	}
+	
+	public String getEspecie() {
+		return especie;
+	}
+	
+	public void setEspecie(String especie) {
+		this.especie = especie;
+	}
+	
+	public Date getFechaNacimiento() {
+		return fechaNac;
+	}
+	
+	public void setFechaNacimiento(Date fechaNac) {
+		this.fechaNac = fechaNac;
+	}
+	
+	public void setPadre(Mamifero padre) {
+		this.padre = padre;
+	}
+
+	public void setMadre(Mamifero madre) {
+		this.madre = madre;
+	}
+
+	public Mamifero getPadre() {
+		return this.padre;
+	}
+	
+	public Mamifero getMadre() {
+		return this.madre;
+	}
+
+/*
+ * Padres desconocidos: los mamíferos "raíz" no tienen padre ni madre registrados.
+ * Hay dos opciones:
+ *  1. Chequear null (o nil) antes de cada mensaje.
+	2. Usar un objeto nulo (patrón Null Object), por ejemplo un AncestroDesconocido que responda false a 
+		tieneComoAncestroA y que se devuelva a sí mismo en getPadre() y getMadre(). Esto elimina los if y hace que también funcionen getAbueloMaterno() y similares sin romperse.
+ * 
+ */
+	public Mamifero getAbueloMaterno() {
+		if( this.madre == null) {
+			return null;
+		}
+		return this.madre.getPadre();
+	}
+	
+	public Mamifero getAbuelaMaterna() {
+		if( this.madre == null) {
+			return null;
+		}
+		return this.madre.getMadre();
+	}
+	
+	public Mamifero getAbueloPaterno() {
+		if( this.padre == null) {
+			return null;
+		}
+		return this.padre.getPadre();
+	}	
+	
+	public Mamifero getAbuelaPaterna() {
+		if( this.padre == null) {
+			return null;
+		}
+		return this.padre.getMadre();
+	}
+	
+	
+	
+}

@@ -9,9 +9,7 @@ public class Mamifero {
 	private Mamifero madre;
 	
 	public Mamifero(String especie) {
-		this.id = id;
 		this.especie = especie;
-		this.fechaNac = fechaNac;
 	}
 	
 	public String getIdentificador() {
@@ -54,14 +52,6 @@ public class Mamifero {
 		return this.madre;
 	}
 
-/*
- * Padres desconocidos: los mamíferos "raíz" no tienen padre ni madre registrados.
- * Hay dos opciones:
- *  1. Chequear null (o nil) antes de cada mensaje.
-	2. Usar un objeto nulo (patrón Null Object), por ejemplo un AncestroDesconocido que responda false a 
-		tieneComoAncestroA y que se devuelva a sí mismo en getPadre() y getMadre(). Esto elimina los if y hace que también funcionen getAbueloMaterno() y similares sin romperse.
- * 
- */
 	public Mamifero getAbueloMaterno() {
 		if( this.madre == null) {
 			return null;
@@ -88,6 +78,24 @@ public class Mamifero {
 			return null;
 		}
 		return this.padre.getMadre();
+	}
+	
+	/*
+	 Si el padre o madre es el mamifero o si el padre lo tiene como ancestro o si
+	 la madre lo tiene como ancestro
+	*/
+	
+	public boolean tieneComoAncestroA(Mamifero unMamifero) {
+	    if (this.padre == unMamifero || this.madre == unMamifero) {
+	        return true;
+	    }
+	    if (this.padre != null && this.padre.tieneComoAncestroA(unMamifero)) {
+	        return true;
+	    }
+	    if (this.madre != null && this.madre.tieneComoAncestroA(unMamifero)) {
+	        return true;
+	    }
+	    return false;
 	}
 	
 }

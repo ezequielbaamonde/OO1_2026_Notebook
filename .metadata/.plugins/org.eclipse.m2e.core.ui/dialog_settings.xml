@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Ezequiel\Downloads\jobScheduler"/>
 			<item value="C:\Users\Ezequiel\Documents\UNLP\2do AÑO\OO1_2026\Prácticas\Semana24deAgosto\ejercicio1"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -15,6 +16,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Ezequiel\Downloads\jobScheduler\src\main\java\ar\edu\unlp\info\oo1\jobScheduler"/>
+			<item value="C:\Users\Ezequiel\eclipse-workspace\ejercicio11\src\test\java\ar\edu\unlp\info\oo1\ejercicio11"/>
+			<item value="C:\Users\Ezequiel\eclipse-workspace\Punto9"/>
 			<item value="C:\Users\Ezequiel\eclipse-workspace\ejercicio6"/>
 			<item value="C:\Users\Ezequiel\Documents\UNLP\2do AÑO\OO1_2026\Prácticas\Semana24deAgosto\ejercicio1"/>
 		</list>
@@ -40,22 +44,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="ar.edu.unlp.info.oo1.ejercicio10"/>
-			<item value="ar.edu.unlp.info.oo1.Punto9"/>
-			<item value="ar.edu.unlp.info.oo1.figurasYCuerpos"/>
-			<item value="ar.edu.unlp.info.oo1.ejercicio6"/>
-			<item value="ar.edu.unlp.info.oo1"/>
-			<item value="ar.edu.unlp.info.oo1.ejercicio2"/>
 		</list>
 		<list key="groupId">
-			<item value="ar.edu.unlp.info.oo1"/>
 		</list>
 		<list key="artifactId">
-			<item value="ejercicio10"/>
-			<item value="Punto9"/>
-			<item value="figurasYCuerpos"/>
-			<item value="ejercicio6"/>
-			<item value="ejercicio2"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

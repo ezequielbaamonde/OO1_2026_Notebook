@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ar.edu.unlp.info.oo1.ejercicio6.Mamifero;
-
 public class MamiferoTest {
 	private Mamifero nala;
 	private Mamifero melquiades;

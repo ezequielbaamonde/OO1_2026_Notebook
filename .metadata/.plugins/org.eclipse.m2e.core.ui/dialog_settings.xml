@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Ezequiel\eclipse-workspace\jobScheduler"/>
 			<item value="C:\Users\Ezequiel\Downloads\jobScheduler"/>
 			<item value="C:\Users\Ezequiel\Documents\UNLP\2do AÑO\OO1_2026\Prácticas\Semana24deAgosto\ejercicio1"/>
 		</list>
@@ -44,10 +45,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="ar.edu.unlp.info.oo1.ej15"/>
+			<item value="io.github.unlp_oo.ejercicio15"/>
 		</list>
 		<list key="groupId">
+			<item value="ar.edu.unlp.info.oo1"/>
+			<item value="io.github.unlp-oo"/>
 		</list>
 		<list key="artifactId">
+			<item value="ej15"/>
+			<item value="ejercicio15"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

@@ -7,7 +7,7 @@ public class Email {
 	private String cuerpo;
 	private List<Archivo> adjuntos;
 	
-	private Email(String titulo, String cuerpo) {
+	public Email(String titulo, String cuerpo) {
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;
 		this.adjuntos = new ArrayList<Archivo>();
@@ -23,6 +23,10 @@ public class Email {
 	
 	public List<Archivo> adjuntos() {
 		return new ArrayList<Archivo>(this.adjuntos);
+	}
+	
+	public void agregarAdjunto(Archivo a) {
+		this.adjuntos.add(a);
 	}
 	
 	//Falta algún método más
@@ -41,5 +45,6 @@ public class Email {
 		         + this.cuerpo.length()
 		         + this.adjuntos.stream().mapToInt(Archivo::tamaño).sum();
 	}
+	
 	
 }

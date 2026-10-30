@@ -46,6 +46,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="ar.edu.unlp.info.oo1.ejercicio18"/>
 			<item value="ar.edu.unlp.info.oo1.ejercicio17"/>
 			<item value="ar.edu.unlp.info.oo1.ejercicio16"/>
 			<item value="ar.edu.unlp.info.oo1.ej15"/>
@@ -56,6 +57,7 @@
 			<item value="io.github.unlp-oo"/>
 		</list>
 		<list key="artifactId">
+			<item value="ejercicio18"/>
 			<item value="ejercicio17"/>
 			<item value="ejercicio16"/>
 			<item value="ej15"/>

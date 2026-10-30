@@ -8,6 +8,7 @@ public class ClienteDeCorreo {
 	public ClienteDeCorreo() {
 		this.inbox = new Carpeta("Inbox");
 		this.carpetas = new ArrayList<Carpeta>();
+		this.carpetas.add(inbox);
 	}
 	
 	public void recibir(Email email) {
@@ -31,6 +32,11 @@ public class ClienteDeCorreo {
 		return this.carpetas.stream()
 				.mapToInt(c -> c.espacioOcupado())
 				.sum();
+	}
+	
+	
+	public Carpeta getInbox(){
+		return this.inbox;
 	}
 
 }

@@ -43,4 +43,9 @@ public class Carpeta {
 	public void AgregarEmail(Email email) {
 		this.emails.add(email);
 	}
+	
+	public boolean contiene(Email e){
+		return this.emails.contains(e);
+		
+	}
 }

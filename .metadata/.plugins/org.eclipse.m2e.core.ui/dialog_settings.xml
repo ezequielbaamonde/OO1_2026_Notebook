@@ -17,6 +17,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Ezequiel\eclipse-workspace\figurasYCuerpos"/>
 			<item value="C:\Users\Ezequiel\Downloads\jobScheduler\src\main\java\ar\edu\unlp\info\oo1\jobScheduler"/>
 			<item value="C:\Users\Ezequiel\eclipse-workspace\ejercicio11\src\test\java\ar\edu\unlp\info\oo1\ejercicio11"/>
 			<item value="C:\Users\Ezequiel\eclipse-workspace\Punto9"/>
@@ -45,6 +46,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="ar.edu.unlp.info.oo1.ejercicio17"/>
 			<item value="ar.edu.unlp.info.oo1.ejercicio16"/>
 			<item value="ar.edu.unlp.info.oo1.ej15"/>
 			<item value="io.github.unlp_oo.ejercicio15"/>
@@ -54,6 +56,7 @@
 			<item value="io.github.unlp-oo"/>
 		</list>
 		<list key="artifactId">
+			<item value="ejercicio17"/>
 			<item value="ejercicio16"/>
 			<item value="ej15"/>
 			<item value="ejercicio15"/>

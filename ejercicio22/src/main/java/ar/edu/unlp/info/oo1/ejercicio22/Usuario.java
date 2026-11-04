@@ -20,12 +20,12 @@ public class Usuario {
 		return p.reservar(periodo);
 	}
 	
-	public boolean cancelarReserva(Reserva r) {
+	//Ahora es DOUBLE porque retorna el monto a reembolsar
+	public double cancelarReserva(Reserva r) {
 		if (r.estaEnCurso()) {
-			return false;
+			return -1; //¿está ok esto?
 		}
-		r.getPropiedad().cancelarReserva(r);
-		return true;
+		return r.getPropiedad().cancelarReserva(r);
 		
 	}
 	

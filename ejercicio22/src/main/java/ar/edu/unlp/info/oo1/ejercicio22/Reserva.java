@@ -27,7 +27,7 @@ public class Reserva {
 	    return !hoy.isBefore(this.periodo.getFrom()) && hoy.isBefore(this.periodo.getTo());
 	}
 	
-	// Reserva
+	
 	public boolean estaIncluidaEn(TimeLapse otroPeriodo) {
 	    return !this.periodo.getFrom().isBefore(otroPeriodo.getFrom())
 	        && !this.periodo.getTo().isAfter(otroPeriodo.getTo());

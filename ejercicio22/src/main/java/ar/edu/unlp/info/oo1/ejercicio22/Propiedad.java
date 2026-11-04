@@ -1,5 +1,4 @@
 package ar.edu.unlp.info.oo1.ejercicio22;
-import java.time.LocalDate;
 import java.util.*;
 
 public class Propiedad {
@@ -7,12 +6,14 @@ public class Propiedad {
 	private String nombreDesc;
 	private double precioPorNoche;
 	private List<Reserva> reservas;
+	private PoliticaDeCancelacion politica;
 	
-	public Propiedad(String direccion, String nombreDesc, double precioPorNoche) {
+	public Propiedad(String direccion, String nombreDesc, double precioPorNoche, PoliticaDeCancelacion politica) {
 		this.direccion = direccion;
 		this.nombreDesc = nombreDesc;
 		this.precioPorNoche = precioPorNoche;
 		this.reservas = new ArrayList<Reserva>();
+		this.politica = politica;
 	}
 	
 	
@@ -24,7 +25,7 @@ public class Propiedad {
 		 if (!this.consultarDispo(periodo)) {
 		        return null;                       // no se crea la reserva
 		    }
-		    Reserva r = new Reserva(new DateLapse(periodo.getFrom(), periodo.getTo()), this);
+		    Reserva r = new Reserva(new DateLapse(periodo.getFrom(), periodo.getTo()), this);//desde, hasta, propiedad
 		    this.reservas.add(r);
 		    return r;
 	}
@@ -44,11 +45,14 @@ public class Propiedad {
 		this.reservas.add(r);
 	}
 	
-	public void cancelarReserva(Reserva r) {
+	//Ahora es DOUBLE porque retorna el monto a reembolsar
+	public double cancelarReserva(Reserva r) {
 		this.reservas.remove(r);
+		return this.politica.calcularReembolso(r);
+		
 	}
 	
-	// Propiedad
+	
 	public double calcularPrecioReservasEn(TimeLapse periodo) {
 	    return this.reservas.stream()
 	            .filter(r -> r.estaIncluidaEn(periodo))

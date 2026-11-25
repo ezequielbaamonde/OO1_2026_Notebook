@@ -23,7 +23,7 @@ public class DateLapse implements TimeLapse{
 	public int sizeInDays() {
 		//Equivalente: return (int) from.until(to, ChronoUnit.DAYS);
 		//Se pone (int) para castear el LONG que retorna ChronoUnit a int
-		return (int) ChronoUnit.DAYS.between(from, to);
+		return (int) ChronoUnit.DAYS.between(from, LocalDate.now());
 	}
 	
 	
